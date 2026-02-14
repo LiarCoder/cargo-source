@@ -157,7 +157,9 @@ impl Default for Cli {
             .arg_required_else_help(true)
             .subcommand_required(true)
             .subcommands([
-                Command::new("list").about("List all the registries").alias("ls"),
+                Command::new("list")
+                    .about("List all the registries")
+                    .visible_alias("ls"),
                 Command::new("use")
                     .about("Change registry to registry")
                     .arg(arg!(<registry> "registry").required(true)),
@@ -165,7 +167,9 @@ impl Default for Cli {
                     .about("Add one custom registry")
                     .arg(arg!(<name> "Name of registry").required(true))
                     .arg(arg!(<url> "Url of registry").required(true)),
-                Command::new("test").about("Test the speed of all the registries").alias("t"),
+                Command::new("test")
+                    .about("Test the speed of all the registries")
+                    .visible_alias("t"),
             ]);
             // .after_help(
             //     "If you find 【cargo-source】 is useful, or you are a experienced Rust developer, or you have the interest in the project, then welcome to submit PRs and help maintain 【cargo-source】. \n \
