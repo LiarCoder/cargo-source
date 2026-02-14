@@ -25,10 +25,13 @@ Registry has been replaced with ustc
 ```
 ## Usage
 ```
+cargo-source [subcommand] [options]
+
 Commands:
-  list  List all the registries
+  list  List all the registries [aliases: ls]
   use   Change registry to registry
   add   Add one custom registry
+  test  Test the speed of all the registries [aliases: t]
   help  Print this message or the help of the given subcommand(s)
 
 Options:
